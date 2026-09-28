@@ -22,9 +22,18 @@ Treat `Storyboard_Manifest.md` as the single working storyboard file. Its `draft
 ## User-designated visual and factual sources
 
 - Put a `## 用户指定来源` register before slide entries in every new manifest. Give each designated video and official-site URL a stable `source_id` and document its purpose. Write `未指定` for a missing category rather than inventing a URL.
-- Use designated videos to find frames supporting specific slide arguments. For each saved frame, record source ID, timestamp, visible subject, target `slide_id`, and saved asset path. Distinguish planned captures from saved assets.
+- Use designated videos to find frames supporting specific slide arguments. For each saved frame, record source ID, timestamp, visible subject, target `slide_id`, and saved asset path. Track planned captures, saved assets and final-crop-reviewed assets separately. Record actual player time, visible subject, stream resolution and saved-image pixel dimensions; do not present a high-resolution stream as an equally high-resolution screenshot.
 - Use designated official pages for product imagery and for checking storyboard facts. Revise approved content only when the user's instruction permits it and the correction is grounded in the designated page; record the evidence and increment each affected slide's `revision`.
 - Reference source IDs in relevant slides' `视觉设计` or `可用来源`. Carry image attribution into later PPT notes or the project asset register.
+
+## Agenda, chapter covers and visible sources
+
+- Title the agenda `内容目录` or a meaningful thematic title. Do not count questions or pages in its title; avoid constructions such as `三个问题，25页正文`.
+- Plan a dedicated chapter cover before each substantive chapter. Give each one its own stable semantic `slide_id`, the corresponding `section_id`, and `type: section_divider`. Its visual intent should introduce the chapter's subject or central question, not duplicate the entire agenda. The overall cover and agenda are not substantive chapters.
+- Track content pages separately from the overall cover, agenda and chapter covers. Preserve the user's requested content allocation; unless explicitly included in a fixed total, chapter covers are additional structural pages. Surface a fixed-total conflict during draft planning rather than silently consuming content pages or omitting chapter covers.
+- Keep sources in speaker notes and evidence/asset registers. Do not put source text at the lower-left of an image, in visible image captions or slide footers, or in another corner as a workaround. If required attribution conflicts, choose a suitable alternative asset rather than discard provenance or mandatory attribution.
+- Write visible analytical slide copy as a direct account of the function, user value and product competitiveness. Avoid source-by-source narration such as “发布会说” or “官网补充” in the body; retain the precise provenance and fact/demo/plan/inference distinction in the Manifest evidence fields and speaker notes. Keep material availability, cost and compatibility limits visible when needed for a truthful user-facing claim.
+- These defaults guide new drafts and authorized revisions. Do not silently retrofit extra pages or change approved titles in an existing approved deck without authorization.
 
 ## Choose the workflow
 
@@ -72,7 +81,9 @@ Read [references/audit-contract.md](references/audit-contract.md). First invento
 
 ## Change control
 
-- Update the manifest before changing a storyboard-controlled PPT.
+- Treat pure rendering fixes (CSS class isolation, z-order, spacing, visibility or crop adjustments that preserve the approved visual intent and evidence) as implementation corrections. Do not demand renewed storyboard approval or change content revisions for them; record the artifact correction and reset/repeat affected visual checks. Update the manifest first if the fix changes approved wording, core expression, evidence meaning, chapter structure or visual intent; use existing authorization rather than asking again unnecessarily.
+
+- Update the manifest before making content or visual-intent changes to a storyboard-controlled presentation; implementation-only fixes follow the rule above.
 - Increment the affected slide's `revision` for an approved content change.
 - Record what changed and why in the project's changelog when one exists.
 - If the user changes only a score, weight, source, or wording, update every slide that consumes that fact; do not infer impact by page adjacency.
