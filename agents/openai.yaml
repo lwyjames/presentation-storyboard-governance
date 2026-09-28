@@ -1,0 +1,14 @@
+interface:
+  display_name: Storyboard 与演示文稿治理
+  short_description: 以稳定语义ID管理Storyboard、PPT映射与一致性验收
+  default_prompt: 使用 $presentation-storyboard-governance 将已确认的 Storyboard 转为唯一事实源，并核验
+    PPT。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
