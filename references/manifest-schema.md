@@ -23,9 +23,9 @@ Required fields:
 
 ## User-designated sources
 
-Before the first slide entry, add `## 用户指定来源` with separate `### 视频来源` and `### 官网来源` tables. Each row has `source_id`, user-designated URL, purpose, and designation context. Use `未指定` when a category has no supplied URL. Do not substitute search results for a user-designated source.
+Default to registering designated sources in the internal project register, linked by stable `slide_id`. Include a visible `## 用户指定来源` section and separate `### 视频来源` / `### 官网来源` tables only when the user explicitly requests sources. Each source record has `source_id`, user-designated URL, purpose and designation context. Use `未指定` for a missing category. Do not substitute search results for a user-designated source.
 
-For saved assets, record the source ID, video timestamp when applicable, visible subject, relevant `slide_id`, and saved file path. Reference the IDs in slide `视觉设计` or `可用来源`. Official-site corrections require evidence and a revision increment on affected slides; a URL registration alone does not imply a page was verified.
+For saved assets, record the source ID, video timestamp when applicable, visible subject, relevant `slide_id`, and saved file path. Link the IDs to each relevant `slide_id` in the internal register rather than in default review-facing `视觉设计` or `可用来源`. Official-site corrections require evidence and a revision increment on affected slides; a URL registration alone does not imply a page was verified.
 
 ## Slide entry
 
@@ -47,7 +47,7 @@ locked: false
 ```
 ````
 
-The content after the YAML block remains human-readable Markdown. Preserve the source's semantic labels and wording.
+The content after the YAML block remains human-readable Markdown. Preserve the source's semantic labels and wording. Default to `核心表达`, `页面内容`, `视觉设计` and optional `讲解重点`. Omit evidence locators, claim classifications, source conflicts, judgment-boundary sections and capture diagnostics from the review body; retain those internally. Integrate material product qualifiers into page content.
 
 Required slide fields:
 
@@ -56,12 +56,16 @@ Required slide fields:
 | `slide_id` | Unique, stable, semantic, uppercase hyphenated ID |
 | `section_id` | Stable semantic section ID |
 | `order` | Unique positive integer; leave gaps for insertion |
-| `source_page_reference` | Provenance only; never an identity key |
+| `source_page_reference` | Provenance only; never an identity key. Default review value: `内部登记`; keep exact locators in the internal project register |
 | `type` | `cover`, `section_divider`, `content`, or `content_locked` |
 | `title` | Current draft or approved title; must match the heading text |
 | `status` | `approved`, `draft`, or `deprecated` |
 | `revision` | Positive integer, incremented after approved changes |
 | `locked` | Boolean protection against unintended rewriting |
+
+## Default visual implementation
+
+For conceptual, scenario and strategic illustration pages, write `视觉设计` around the explanatory subject, layout and a 创建图像 PNG composed with the slide's title and viewpoint/body copy. The illustration need not be editable. For numeric charts or precise process/relationship diagrams, specify deterministic drawing and optional PNG embedding. Keep exact text, values and relationships readable; keep source product/UI imagery genuine. Apply this default while drafting or implementing approved visual intent; do not silently change an already approved argument or visual structure.
 
 ## Stable ID rules
 
@@ -77,7 +81,7 @@ Use `内容目录` or a thematic agenda title without counting questions or page
 
 Record the page budget before the entries: content pages by chapter, overall cover, agenda, chapter covers and total active pages. Keep `slide_count` equal to the actual entry count, not the content-only budget. Unless the user's fixed-total instruction says otherwise, chapter covers are additional structural pages. Resolve any conflicting fixed total during drafting. Preserve existing approved IDs when adding authorized chapter covers.
 
-Record planned/saved/final-crop-reviewed asset readiness in visual/source notes or the linked asset register, not as slide approval status. A saved asset is not automatically crop-reviewed. Store source attribution in notes/registers; omit visible image-source labels, captions and footers.
+Record planned/saved/final-crop-reviewed asset readiness in the linked internal asset register, not in the default review body or as slide approval status. A saved asset is not automatically crop-reviewed. Store source attribution in notes/registers; omit visible image-source labels, captions and footers.
 
 ## Page map
 
