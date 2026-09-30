@@ -38,7 +38,7 @@ Use a level-two Markdown heading followed immediately by a fenced YAML block:
 slide_id: "SB-MARKET-WINNING-PATHS"
 section_id: "SEC-MARKET"
 order: 600
-source_page_reference: 6
+source_page_reference: "内部登记"
 type: "content"
 title: "三家厂商选择了不同的胜利路径"
 status: "approved"

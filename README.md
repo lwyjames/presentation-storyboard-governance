@@ -7,7 +7,7 @@
 - 在同一份 Manifest 中从 `draft` 修订到 `approved`，不另建竞争性的草稿文档。
 - 用户批准指定版本后，才可将其用于成品制作。
 - `slide_id` 表示页面语义，页码由 `order` 派生；PPT 备注通过 `STORYBOARD_ID: <slide_id>` 绑定。
-- 用户指定的视频和官网网址记入 Manifest；旧 PPT 映射和内容改动均以 Manifest 为准。
+- 用户指定的视频和官网网址记入内部项目登记，并关联稳定 `slide_id`；仅在用户明确要求展示来源时，在 Manifest 增加“用户指定来源”章节。旧 PPT 映射和内容改动仍以 Manifest 为准。
 
 ## 校验
 
