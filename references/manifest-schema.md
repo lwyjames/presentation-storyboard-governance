@@ -67,6 +67,8 @@ Required slide fields:
 
 For conceptual, scenario and strategic illustration pages, write `视觉设计` around the explanatory subject, layout and a 创建图像 PNG composed with the slide's title and viewpoint/body copy. The illustration need not be editable. For numeric charts or precise process/relationship diagrams, specify deterministic drawing and optional PNG embedding. Keep exact text, values and relationships readable; keep source product/UI imagery genuine. Apply this default while drafting or implementing approved visual intent; do not silently change an already approved argument or visual structure.
 
+When a page uses a person-and-device scene, make its approved `视觉设计` sufficient for downstream production and QA. Record the visual evidence priority as `person`, `screen`, or `balanced`, together with the intended viewpoint, eyeline target, required screen content, allowed occlusion, and text-safe negative space. These are human-readable visual requirements rather than new YAML identity fields. If the screen carries the page's proof, require a viewpoint that keeps that evidence readable and a credible person eyeline toward the visible screen; do not approve an ambiguous device-back view. Preserve these requirements unchanged through PPT production unless the user authorizes a visual-intent revision.
+
 ## Stable ID rules
 
 - Describe the slide's enduring meaning, not its current position.
